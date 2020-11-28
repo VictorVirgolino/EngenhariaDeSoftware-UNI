@@ -1,0 +1,68 @@
+<header>
+  <div class="title">
+    <img src="../../../assets/imgs/logo.svg" alt="uni-logo" />
+    <p>UNI - Acadêmico</p>
+  </div>
+
+  <nav *ngIf="!logged && !admin">
+    <ul>
+      <li (click)="goToTeam()">Equipe</li>
+      <li (click)="goToRegister()">Cadastro</li>
+      <li (click)="goToLogin()">Login</li>
+    </ul>
+  </nav>
+  <nav *ngIf="logged && !admin">
+    <ul>
+      <li (click)="goToHome()">Home</li>
+      <li (click)="goToEvaluation()">Avaliar</li>
+      <li (click)="goToProfile()">Perfil</li>
+      <li (click)="logout()">Sair</li>
+    </ul>
+  </nav>
+  <nav *ngIf="logged && admin">
+    <ul>
+      <li (click)="goToAdmin()">Cadastro</li>
+      <li (click)="goToVoteAdmin()">Votação</li>
+      <li (click)="logout()">Sair</li>
+    </ul>
+  </nav>
+
+  <div id="mobile" ngbDropdown class="d-inline-block">
+    <button
+      class="btn btn-outline-primary"
+      id="dropdownBasic1"
+      ngbDropdownToggle
+    >
+      Menu
+    </button>
+    <div
+      *ngIf="!logged && !admin"
+      ngbDropdownMenu
+      aria-labelledby="dropdownBasic1"
+    >
+      <button (click)="goToTeam()" ngbDropdownItem>Equipe</button>
+      <button (click)="goToRegister()" ngbDropdownItem>Cadastro</button>
+      <button (click)="goToLogin()" ngbDropdownItem>Login</button>
+    </div>
+    <div
+      *ngIf="logged && !admin"
+      ngbDropdownMenu
+      aria-labelledby="dropdownBasic1"
+    >
+      <button (click)="goToHome()" ngbDropdownItem>Home</button>
+      <button (click)="goToEvaluation()" ngbDropdownItem>Avaliar</button>
+      <button (click)="goToProfile()" ngbDropdownItem>Perfil</button>
+      <button (click)="logout()" ngbDropdownItem>Sair</button>
+    </div>
+
+    <div
+      *ngIf="logged && admin"
+      ngbDropdownMenu
+      aria-labelledby="dropdownBasic1"
+    >
+      <button (click)="goToAdmin()" ngbDropdownItem>Cadastro</button>
+      <button (click)="goToVoteAdmin()" ngbDropdownItem>Votação</button>
+      <button (click)="logout()" ngbDropdownItem>Sair</button>
+    </div>
+  </div>
+</header>

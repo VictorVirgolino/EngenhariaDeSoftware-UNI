@@ -1,0 +1,179 @@
+.note-page {
+  width: 100%;
+  display: flex;
+  height: 100vh;
+}
+
+.intro {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100%;
+  margin-top: 65px;
+}
+
+.flex {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.185);
+  position: absolute;
+  right: 0;
+  margin-top: 65px;
+  height: 100%;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  margin-top: 5%;
+  margin-bottom: 3%;
+  color: white;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  user-select: none;
+  outline: none;
+}
+
+h3 {
+  font: "Poppins", sans-serif;
+}
+
+h5 {
+  font: "Poppins", sans-serif;
+}
+
+.my-avatar /deep/ .avatar-content {
+  background-color: #393d40 !important;
+  font: "Poppins", sans-serif;
+}
+
+ngb-rating {
+  font-size: 30px;
+  color: #ff3;
+}
+
+.note {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.previous {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 32vh;
+}
+
+.list {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.evaluation {
+  width: calc(100% / 2);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  padding: 10px;
+  background: #f9f9f9 0% 0% no-repeat padding-box;
+  border: 1px solid #e1e1e1;
+  border-radius: 12px;
+  opacity: 1;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  height: max-content;
+}
+
+.info {
+  margin-left: 2px;
+  user-select: none;
+}
+
+.info h4 {
+  font: Bold 16px "Poppins", sans-serif;
+  color: #393d40;
+  opacity: 1;
+  user-select: none;
+}
+
+.info p {
+  font: 12px "Poppins", sans-serif;
+  color: #393d40;
+  opacity: 1;
+  margin: 0 auto;
+  user-select: none;
+}
+
+.button {
+  width: 180px;
+  height: 50px;
+  background: #f2f2f2;
+  border-radius: 8px;
+  border: none;
+  transition: all 0.3s;
+  cursor: pointer;
+  margin-top: 1%;
+}
+
+.button:hover {
+  opacity: 80%;
+  transform: scale(1.03);
+  color: black;
+}
+
+@media (max-width: 800px) {
+  .note-page {
+    flex-direction: column;
+  }
+  .intro {
+    width: 100%;
+    padding-left: 3%;
+    padding-right: 3%;
+    position: sticky;
+  }
+  .flex {
+    width: 100%;
+    padding: 0px;
+    position: relative;
+    margin-top: 0px;
+    right: none;
+    min-height: 100%;
+  }
+
+  .evaluation {
+    width: 100%;
+  }
+
+  .note {
+    height: 100%;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .previous {
+    height: 100%;
+  }
+}

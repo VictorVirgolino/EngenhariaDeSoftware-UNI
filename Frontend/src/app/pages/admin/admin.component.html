@@ -1,0 +1,62 @@
+<section class="admin-page">
+  <div class="intro">
+    <img src="../../../assets/imgs/admin.gif" alt="uni-admin" />
+  </div>
+  <div class="add">
+    <form [formGroup]="formAdmin" novalidate>
+      <div class="title">
+        <h2>Adicionar Professor e disciplina</h2>
+      </div>
+      <div class="form-group">
+        <input
+          placeholder="Nome"
+          [class.is-invalid]="isFormFieldInvalid('name')"
+          formControlName="name"
+          type="text"
+        />
+        <div class="messages">
+          <small class="text-danger" *ngIf="hasError('name', 'required')"
+            >*Campo obrigatório</small
+          >
+          <small class="text-danger" *ngIf="hasError('name', 'minlength')"
+            >*Tamanho mínimo de 2 caracteres</small
+          >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input
+          placeholder="Disciplina"
+          [class.is-invalid]="isFormFieldInvalid('currentDiscipline')"
+          formControlName="currentDiscipline"
+          type="text"
+        />
+
+        <div class="messages">
+          <small class="text-danger" *ngIf="hasError('currentDiscipline', 'required')"
+            >*Campo obrigatório</small
+          >
+          <small class="text-danger" *ngIf="hasError('currentDiscipline', 'minlength')"
+            >*Tamanho mínimo de 2 caracteres</small
+          >
+        </div>
+      </div>
+      <button (click)="addTeacher()" class="button" type="submit" [disabled]="!formAdmin.valid">
+        Adicionar
+      </button>
+    </form>
+    <div class="list">
+      <div class="my-loop" *ngFor="let item of all_list">
+        <div class="card" >
+          <div class="info">
+            <h3>{{ item.name }}</h3>
+            <p>{{ item.currentDiscipline }}</p>
+          </div>
+          <div class="btns">
+            <span (click)="delete(item.id)" class="material-icons"> delete </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

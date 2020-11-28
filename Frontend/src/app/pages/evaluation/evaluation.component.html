@@ -1,0 +1,35 @@
+<section class="evaluation-page">
+  <div class="intro">
+    <img src="../../../assets/imgs/search.gif" alt="uni-search" />
+  </div>
+  <div class="flex">
+    <h2>Encontre professores e disciplinas</h2>
+    <div class="box">
+      <div class="container-1">
+        <span (click)="search()" class="material-icons"> search </span>
+        <input
+          [(ngModel)]="name"
+          type="search"
+          id="search"
+          placeholder="Pesquisar..."
+        />
+      </div>
+    </div>
+    <div class="loading" *ngIf="loading">
+      <loading></loading>
+    </div>
+    <div class="not-found" *ngIf="notFound">
+      <h3 class="msg-not-found">Nenhum resultado encontrado</h3>
+    </div>
+    <div class="list">
+      <div class="my-loop" *ngFor="let item of objeto">
+        <div class="card" (click)="redirectTo(item)">
+          <div class="info">
+            <h3>{{ item.name }}</h3>
+            <p>{{ item.currentDiscipline }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,97 @@
+<section class="register-page">
+  <div class="intro">
+    <img src="../../../assets/imgs/register.gif" alt="uni-intro" />
+  </div>
+
+  <form
+    class="flex"
+    [formGroup]="formRegister"
+    (submit)="register()"
+    autocomplete="off"
+    novalidate
+  >
+    <h2 class="title">Realizar Cadastro</h2>
+    <div class="form-group">
+      <input
+        placeholder="Nome"
+        [class.is-invalid]="isFormFieldInvalid('email')"
+        formControlName="name"
+        type="text"
+      />
+      <div class="messages">
+        <small class="text-danger" *ngIf="hasError('name', 'required')"
+          >*Campo obrigatório</small
+        >
+        <small class="text-danger" *ngIf="hasError('name', 'minlength')"
+          >*Tamanho mínimo de 2 caracteres</small
+        >
+      </div>
+    </div>
+    <div class="form-group">
+      <input
+        placeholder="Sobrenome"
+        [class.is-invalid]="isFormFieldInvalid('lastname')"
+        formControlName="lastname"
+        type="text"
+      />
+      <div class="messages">
+        <small class="text-danger" *ngIf="hasError('lastname', 'required')"
+          >*Campo obrigatório</small
+        >
+        <small class="text-danger" *ngIf="hasError('lastname', 'minlength')"
+          >*Tamanho mínimo de 2 caracteres</small
+        >
+      </div>
+    </div>
+    <div class="form-group">
+      <input
+        placeholder="Email (@ccc.ufcg.edu.br)"
+        [class.is-invalid]="isFormFieldInvalid('email')"
+        formControlName="email"
+        type="text"
+      />
+      <div class="messages">
+        <small class="text-danger" *ngIf="hasError('email', 'required')"
+          >*Campo obrigatório</small
+        >
+        <small class="text-danger" *ngIf="hasError('email', 'pattern')"
+          >*Email inválido</small
+        >
+        <small class="text-danger" *ngIf="hasError('email', 'emailTaken')"
+          >*Email em uso</small
+        >
+      </div>
+    </div>
+
+    <div class="form-group">
+      <input
+        placeholder="Senha"
+        [class.is-invalid]="isFormFieldInvalid('password')"
+        formControlName="password"
+        autocomplete="new-password"
+        type="password"
+      />
+      <div class="messages">
+        <small class="text-danger" *ngIf="hasError('password', 'required')"
+          >*Campo obrigatório</small
+        >
+        <small class="text-danger" *ngIf="hasError('password', 'minlength')"
+          >*Tamanho mínimo de 4 caracteres</small
+        >
+      </div>
+    </div>
+
+    <button (click)="register()" class="button" [disabled]="!formRegister.valid" type="submit">
+      Cadastrar
+    </button>
+    <div class="loading" *ngIf="loading">
+      <loading></loading>
+    </div>
+
+    <div class="messages">
+      <small class="text-danger" *ngIf="!successful"
+        >Ocorreu um problema. Tente novamente!</small
+      >
+    </div>
+  </form>
+</section>

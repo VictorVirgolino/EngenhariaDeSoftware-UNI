@@ -1,0 +1,17 @@
+body {
+  background: #24292e;
+  margin: 0;
+  height: 100%;
+  min-height: 100%;
+}
+
+.toast-title {
+  font-family: Poppins;
+}
+
+.toast-message {
+  font-family: Poppins;
+}
+* {
+  outline: none;
+}

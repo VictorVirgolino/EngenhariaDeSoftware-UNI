@@ -1,0 +1,54 @@
+<section class="login-page">
+  <div class="intro">
+    <img src="../../../assets/imgs/login.gif" alt="uni-intro" />
+  </div>
+
+  <form class="login" [formGroup]="formLogin" (submit)="onSubmit()" novalidate>
+    <div class="title">
+      <h2>Fazer Login</h2>
+    </div>
+    <div class="form-group">
+      <input
+        placeholder="Email"
+        [class.is-invalid]="isFormFieldInvalid('email')"
+        formControlName="email"
+        type="text"
+      />
+      <div class="messages">
+        <small class="text-danger" *ngIf="hasError('email', 'required')"
+          >*Campo obrigatório</small
+        >
+      </div>
+    </div>
+
+    <div class="form-group">
+      <input
+        placeholder="Senha"
+        [class.is-invalid]="isFormFieldInvalid('password')"
+        formControlName="password"
+        type="password"
+      />
+
+      <div class="messages">
+        <small class="text-danger" *ngIf="hasError('password', 'required')"
+          >*Campo obrigatório</small
+        >
+      </div>
+    </div>
+    <a (click)="redirectToForgotPassword()" class="forget"
+      >Esqueci minha senha</a
+    >
+    <button class="button" type="submit" [disabled]="!formLogin.valid">
+      Entrar
+    </button>
+
+    <div class="loading" *ngIf="loading">
+      <loading></loading>
+    </div>
+    <div class="messages">
+      <small class="text-danger" *ngIf="!loginSuccessful"
+        >*Ocorreu um problema no login</small
+      >
+    </div>
+  </form>
+</section>

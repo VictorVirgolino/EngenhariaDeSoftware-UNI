@@ -1,0 +1,350 @@
+{
+  "login": [],
+  "register": [
+    {
+      "id": 1,
+      "firstName": "Admin",
+      "lastName": "Uni",
+      "email": "admin@admin.com",
+      "password": "admin123"
+    },
+    {
+      "firstName": "Gustavo",
+      "lastName": "Dias",
+      "email": "gustavo.dias@ccc.ufcg.edu.br",
+      "password": "guga123",
+      "id": 2
+    },
+    {
+      "firstName": "Gustavo",
+      "lastName": "Dias",
+      "email": "gustavo.dias@ccc.ufcg.edu.br",
+      "password": "guga123",
+      "id": 3
+    },
+    {
+      "firstName": "Gustavo",
+      "lastName": "Dias",
+      "email": "gustavo.dias@ccc.ufcg.edu.br",
+      "password": "guga123",
+      "id": 4
+    },
+    {
+      "firstName": "Gustavo",
+      "lastName": "Dias",
+      "email": "gustavo.dias@ccc.ufcg.edu.br",
+      "password": "guga123",
+      "id": 5
+    }
+  ],
+  "evaluation": [
+    {
+      "id": 1,
+      "name": "Dalton Serrey",
+      "currentDiscipline": "Programação 1",
+      "previous": [
+        {
+          "subject": "Projeto de Software",
+          "note": "3",
+          "period": "2019.2"
+        },
+        {
+          "subject": "Programação 1",
+          "note": "5",
+          "period": "2019.1"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Melina Mongiovi",
+      "currentDiscipline": "Projeto de Software",
+      "previous": [
+        {
+          "subject": "Paradgimas de linguagens de programação",
+          "note": "4",
+          "period": "2019.2"
+        },
+        {
+          "subject": "Analise e tecnica de algoritmos",
+          "note": "4",
+          "period": "2019.1"
+        },
+        {
+          "subject": "Programação 2",
+          "note": "5",
+          "period": "2018.2"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Joseana Fechine",
+      "currentDiscipline": "Organização de Computadores",
+      "previous": [
+        {
+          "subject": "Introdução à Computação",
+          "note": "5",
+          "period": "2017.2"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Adalberto Cajueiro",
+      "currentDiscipline": "Estrutura de Dados",
+      "previous": [
+        {
+          "subject": "Laboratório de Estrutura de dados",
+          "note": "5",
+          "period": "2019.2"
+        },
+        {
+          "subject": "Programação Funcional",
+          "note": "5",
+          "period": "2019.1"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "João Arthur",
+      "currentDiscipline": "Arquitetura de Software",
+      "previous": [
+        {
+          "subject": "Estrutura de dados",
+          "note": "5",
+          "period": "2019.1"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Franklin Ramalho",
+      "currentDiscipline": "Análise de Sistemas",
+      "previous": [
+        {
+          "subject": "Compiladores",
+          "note": "5",
+          "period": "2019.2"
+        },
+        {
+          "subject": "Análise de Sistemas",
+          "note": "5",
+          "period": "2018.1"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Kyller Gorgônio",
+      "currentDiscipline": "Teoria da Computação",
+      "previous": [
+        {
+          "subject": "Lógica para Computação",
+          "note": "5",
+          "period": "2019.2"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Rohit Gheyi",
+      "currentDiscipline": "Engenharia de Software",
+      "previous": [
+        {
+          "subject": "Engenharia de Software",
+          "note": "5",
+          "period": "2019.2"
+        },
+        {
+          "subject": "Engenharia de Software",
+          "note": "5",
+          "period": "2019.1"
+        },
+        {
+          "subject": "Engenharia de Software",
+          "note": "5",
+          "period": "2018.2"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Reinaldo Gomes",
+      "currentDiscipline": "Redes de Computadores",
+      "previous": []
+    },
+    {
+      "id": 10,
+      "name": "Francisco Brasileiro",
+      "currentDiscipline": "Sistemas Operacionais",
+      "previous": [
+        {
+          "subject": "Sistemas Operacionais",
+          "note": "5",
+          "period": "2019.2"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Fabio Morais",
+      "currentDiscipline": "Projeto de Software",
+      "previous": []
+    }
+  ],
+  "feed": [
+    {
+      "id": 1,
+      "notice": "Leite para a prova de ES: link",
+      "name": "Gustavo Dias",
+      "date": "05/11/2020",
+      "likes": 2
+    },
+    {
+      "id": 2,
+      "notice": "Alguém sabe dizer quem vai ser o professor de AS esse período?",
+      "name": "Thalyta Barbosa",
+      "date": "15/11/2020",
+      "likes": 3
+    },
+    {
+      "id": 3,
+      "notice": "O professor de LOAC avisou que Sexta não temos aula!",
+      "name": "Pierson Filho",
+      "date": "15/11/2020",
+      "likes": 2
+    },
+    {
+      "id": 4,
+      "notice": "Mais alguém pensando em trancar o curso? ;p",
+      "name": "João Victor",
+      "date": "15/11/2020",
+      "likes": 1
+    },
+    {
+      "id": 5,
+      "notice": "Pessoal que paga Calculo 2 na sala 203, a prova foi marcada para proxima segunda!",
+      "name": "Larissa Martins",
+      "date": "15/11/2020",
+      "likes": 3
+    },
+    {
+      "id": 6,
+      "notice": "Alguém com vaga no grupo de ES?",
+      "name": "Lucas Silva",
+      "date": "15/11/2020",
+      "likes": 9
+    },
+    {
+      "id": 7,
+      "notice": "Link de aulas de calculo com grings [https://bit.ly/3kYkUgm]",
+      "name": "Leticia Lima",
+      "date": "15/11/2020",
+      "likes": 4
+    },
+    {
+      "id": 8,
+      "notice": "Pessoal que paga ATAL a aula de hoje foi cancelada!",
+      "name": "Marina Dantas",
+      "date": "15/11/2020",
+      "likes": 2
+    },
+    {
+      "notice": "Teste",
+      "name": "Gustavo Dias",
+      "likes": 0,
+      "date": "27/11/2020",
+      "id": 9
+    }
+  ],
+  "admin": [
+    {
+      "id": 1,
+      "name": "Joseana Fechine",
+      "currentDiscipline": "Organização de Computadores"
+    },
+    {
+      "id": 2,
+      "name": "Adalberto Cajueiro",
+      "currentDiscipline": "Estrutura de Dados"
+    },
+    {
+      "id": 6,
+      "name": "João Arthur",
+      "currentDiscipline": "Arquitetura de Software"
+    },
+    {
+      "id": 4,
+      "name": "Franklin Ramalho",
+      "currentDiscipline": "Análise de Sistemas"
+    },
+    {
+      "id": 5,
+      "name": "Kyller Gorgônio",
+      "currentDiscipline": "Teoria da Computação"
+    },
+    {
+      "id": 6,
+      "name": "Rohit Gheyi",
+      "currentDiscipline": "Engenharia de Software"
+    },
+    {
+      "id": 7,
+      "name": "Joao",
+      "currentDiscipline": "Redes de Computadores"
+    },
+    {
+      "name": "Dalton Serrey",
+      "currentDiscipline": "Programação 1",
+      "id": 9
+    },
+    {
+      "name": "Fabio Morais",
+      "currentDiscipline": "Projeto de Software",
+      "id": 10
+    }
+  ],
+  "team": [
+    {
+      "name": "Almir Gonçalves Crispiniano"
+    },
+    {
+      "name": "Arthur Fernandes de Andrade"
+    },
+    {
+      "name": "Caroliny Mylena Bezerra da Silva"
+    },
+    {
+      "name": "Danilo Cezar Ribeiro Garcia de Medeiros"
+    },
+    {
+      "name": "José Guilherme Coelho de Oliveira"
+    },
+    {
+      "name": "José Adrião Barbosa Mendes Junior"
+    },
+    {
+      "name": "Isaías Martins Teixeira Pontes"
+    },
+    {
+      "name": "Higor Roberto Ferreira Araujo"
+    },
+    {
+      "name": "Matheus Augusto Silva do Nascimento"
+    },
+    {
+      "name": "Wesley Felipe Gurgel de Almeida"
+    },
+    {
+      "name": "Victor Arruda Camara Virgolino"
+    }
+  ],
+  "profile": {
+    "firstName": "Gustavo",
+    "lastName": "Dias",
+    "email": "gustavo.dias@ccc.ufcg.edu.br",
+    "password": "Guga0506"
+  }
+}

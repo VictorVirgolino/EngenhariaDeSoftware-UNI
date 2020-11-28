@@ -1,0 +1,91 @@
+<section class="profile-page">
+  <div class="intro">
+    <img src="../../../assets/imgs/profile.gif" alt="uni-note" />
+  </div>
+
+  <div class="flex">
+    <h2>Editar Perfil</h2>
+    <form [formGroup]="editUser" (submit)="edit()" novalidate>
+      <div class="form-group">
+        <input
+          placeholder="Nome"
+          [class.is-invalid]="isFormFieldInvalid('name')"
+          formControlName="name"
+          type="text"
+          [value]="user.firstName"
+        />
+        <div class="messages">
+          <small class="text-danger" *ngIf="hasError('name', 'required')"
+            >*Campo obrigatório</small
+          >
+          <small class="text-danger" *ngIf="hasError('name', 'minlength')"
+            >*Tamanho mínimo de 2 caracteres</small
+          >
+        </div>
+      </div>
+      <div class="form-group">
+        <input
+          placeholder="Sobrenome"
+          [class.is-invalid]="isFormFieldInvalid('lastname')"
+          formControlName="lastname"
+          type="text"
+          value="Dias"
+        />
+        <div class="messages">
+          <small class="text-danger" *ngIf="hasError('lastname', 'required')"
+            >*Campo obrigatório</small
+          >
+          <small class="text-danger" *ngIf="hasError('lastname', 'minlength')"
+            >*Tamanho mínimo de 2 caracteres</small
+          >
+        </div>
+      </div>
+      <div class="form-group">
+        <input
+          placeholder="Email"
+          [class.is-invalid]="isFormFieldInvalid('email')"
+          formControlName="email"
+          type="text"
+          value="gustavo.dias@ccc.ufcg.edu.br"
+        />
+        <div class="messages">
+          <small class="text-danger" *ngIf="hasError('email', 'required')"
+            >*Campo obrigatório</small
+          >
+          <small class="text-danger" *ngIf="hasError('email', 'pattern')"
+            >*Email inválido</small
+          >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input
+          placeholder="Senha"
+          [class.is-invalid]="isFormFieldInvalid('password')"
+          formControlName="password"
+          type="password"
+          value="Guga0506"
+        />
+        <div class="messages">
+          <small class="text-danger" *ngIf="hasError('password', 'required')"
+            >*Campo obrigatório</small
+          >
+          <small class="text-danger" *ngIf="hasError('password', 'minlength')"
+            >*Tamanho mínimo de 4 caracteres</small
+          >
+        </div>
+      </div>
+    </form>
+    <div class="buttons">
+      <button
+        type="submit"
+        [disabled]="!editUser.valid"
+        (click)="edit()"
+        class="button"
+      >
+        Editar
+      </button>
+      <button class="button">Excluir Conta</button>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+<section class="admin-vote">
+  <div class="intro">
+    <img src="../../../assets/imgs/vote.gif" alt="uni-admin-vote" />
+  </div>
+  <div class="vote">
+    <h2>Abrir votação</h2>
+    <div *ngIf="open" class="before-vote">
+      <input
+        formControlName="period"
+        placeholder="Período (Exemplo: 2020.3)"
+        type="text"
+      />
+      <button (click)="openVote()" class="button" type="submit">
+        Adicionar
+      </button>
+    </div>
+    <button (click)="closeVote()" *ngIf="close" class="button" type="submit">
+      Encerrar Votação Atual
+    </button>
+  </div>
+</section>

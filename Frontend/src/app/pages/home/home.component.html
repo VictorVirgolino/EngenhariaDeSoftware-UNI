@@ -1,0 +1,29 @@
+<section class="home-page">
+  <div class="intro">
+    <img src="../../../assets/imgs/feed.gif" alt="uni-feed" />
+  </div>
+  <div class="flex">
+    <h2>Feed</h2>
+    <textarea id="publi" type="text" placeholder="O que você está pensando?"></textarea>
+    <button (click)="post()" class="button" type="submit">Publicar</button>
+    <div class="list">
+      <div class="my-loop" *ngFor="let item of feed">
+        <div class="card">
+          <div class="info">
+            <h3>{{ item.notice }}</h3>
+            <div class="user">
+              <div class="likes">
+                <span (click)="like(item)" class="material-icons"> thumb_up_alt </span>
+                <h6>{{ item.likes }}</h6>
+              </div>
+              <div>
+                <p>{{ item.name }}</p>
+                <p>{{ item.date }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
